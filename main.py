@@ -99,8 +99,8 @@ def main():
     for database in list(DATABASES):
         final_databases = check_databases(all_databases, database)
         get_dump(final_databases)
-    log.info("Finished")
     slack_message.send_message()
+    log.info("Finished")
 
 if __name__ == "__main__":
     log = Logger(__name__).setup()
